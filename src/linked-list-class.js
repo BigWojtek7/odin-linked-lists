@@ -15,11 +15,9 @@ class LinkedList {
       this.head = node;
     } else {
       current = this.head;
-
       while (current.nextNode) {
         current = current.nextNode;
       }
-
       current.nextNode = node;
     }
     this.size += 1;
@@ -53,7 +51,6 @@ class LinkedList {
     while (current.nextNode) {
       current = current.nextNode;
     }
-
     return current.value;
   }
 
@@ -68,7 +65,6 @@ class LinkedList {
       }
       count += 1;
     }
-
     return "index out of range";
   }
 
@@ -76,48 +72,41 @@ class LinkedList {
     let current = this.head;
     let prev = null;
     while (current.nextNode) {
-      if (current.nextNode !== null) prev = current
+      if (current.nextNode !== null) prev = current;
       current = current.nextNode;
-
-      
     }
-
-    prev.nextNode = null
+    prev.nextNode = null;
   }
 
-  contains(value){
+  contains(value) {
     let current = this.head;
     while (current.nextNode) {
-      if (current.value === value) return true
+      if (current.value === value) return true;
       current = current.nextNode;
     }
 
-    return false
-    // console.log(Object.values(this.head.nextNode))
+    return false;
   }
 
-  find(value){
+  find(value) {
     let current = this.head;
     let count = 0;
     while (current.nextNode) {
-      if (current.value === value) return count
+      if (current.value === value) return count;
       current = current.nextNode;
-      count += 1
+      count += 1;
     }
-
-    return null
-
+    return null;
   }
 
-  toString(){
+  toString() {
     let current = this.head;
     let str = "";
     while (current) {
-        str += `( ${current.value} ) -> `
-        current = current.nextNode;
+      str += `( ${current.value} ) -> `;
+      current = current.nextNode;
     }
-    return `${str}${null}`
-
+    return `${str}${null}`;
   }
 }
 

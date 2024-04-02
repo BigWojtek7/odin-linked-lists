@@ -1,5 +1,4 @@
 import LinkedList from "./linked-list-class.js";
-// import Node from "./node-class.js";
 
 const list = new LinkedList();
 list.append(5555);
@@ -10,4 +9,3 @@ list.prepend("first");
 console.dir(list, { depth: null });
 
 console.dir(list.toString());
-
