@@ -62,16 +62,62 @@ class LinkedList {
     let count = 0;
     while (current.nextNode) {
       current = current.nextNode;
-      
 
       if (count === index) {
         return current.value;
       }
       count += 1;
-
     }
 
     return "index out of range";
+  }
+
+  pop() {
+    let current = this.head;
+    let prev = null;
+    while (current.nextNode) {
+      if (current.nextNode !== null) prev = current
+      current = current.nextNode;
+
+      
+    }
+
+    prev.nextNode = null
+  }
+
+  contains(value){
+    let current = this.head;
+    while (current.nextNode) {
+      if (current.value === value) return true
+      current = current.nextNode;
+    }
+
+    return false
+    // console.log(Object.values(this.head.nextNode))
+  }
+
+  find(value){
+    let current = this.head;
+    let count = 0;
+    while (current.nextNode) {
+      if (current.value === value) return count
+      current = current.nextNode;
+      count += 1
+    }
+
+    return null
+
+  }
+
+  toString(){
+    let current = this.head;
+    let str = "";
+    while (current) {
+        str += `( ${current.value} ) -> `
+        current = current.nextNode;
+    }
+    return `${str}${null}`
+
   }
 }
 

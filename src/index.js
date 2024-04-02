@@ -8,4 +8,6 @@ list.append(7777);
 list.append(2323);
 list.prepend("first");
 console.dir(list, { depth: null });
-console.log(list.atIndex(7));
+
+console.dir(list.toString());
+
