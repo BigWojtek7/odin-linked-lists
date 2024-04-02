@@ -25,9 +25,7 @@ class LinkedList {
 
   prepend(value) {
     const node = new Node(value);
-
     let current;
-
     if (this.head === null) {
       this.head = node;
     } else {
