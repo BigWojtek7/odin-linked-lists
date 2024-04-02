@@ -1,21 +1,9 @@
-import "./style.css";
+import LinkedList from "./linked-list-class.js";
+// import Node from "./node-class.js";
 
-class LinkedList{
-  constructor(name) {
-    this.name = name;
-  }
-
-  append(value){
-    ...
-  }
-  prepend(value){
-    ...
-  }
-}
-
-class Node {
-  constructor(value = null , nextNode = null){
-    this.value = value
-    this.nextNode = nextNode
-  }
-}
+const list = new LinkedList();
+list.append(5555);
+list.append(4320);
+list.append(7777);
+list.append(2323);
+console.dir(list, { depth: null });
